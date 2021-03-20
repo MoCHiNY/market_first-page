@@ -24,6 +24,12 @@ $Dianne:#243f4d;
   font-weight: 700;
 }
 
+%Rubik-300 {
+  font-family: 'Rubik-Light',
+    sans-serif;
+  font-weight: 300;
+}
+
 %Rubik-400 {
   font-family: 'Rubik-Regular',
     sans-serif;
@@ -34,6 +40,18 @@ $Dianne:#243f4d;
   font-family: 'Rubik-Medium',
     sans-serif;
   font-weight: 400;
+}
+
+%Rubik-700 {
+  font-family: 'Rubik-Bold',
+    sans-serif;
+  font-weight: 400;
+}
+
+%Poppins-600 {
+  font-family: 'Poppins-SemiBold',
+    sans-serif;
+  font-weight: 600;
 }
 
 %Poppins-700 {
