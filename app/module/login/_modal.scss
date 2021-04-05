@@ -1,0 +1,71 @@
+.modal {
+  display: flex;
+  padding-top: 120px;
+  margin-bottom: 120px;
+
+  &__form {
+    max-width: 470px;
+  }
+
+  &__label,
+  &__link-error,
+  &__noregistered,
+  &__noregistered,
+  &__checkbox {
+    font-size: 14px;
+    @extend %Rubik-400;
+    color: $grey-menu;
+    text-decoration: none;
+  }
+
+  &__input {
+    width: 100%;
+    border: 2px solid #f6f6f6;
+    padding: 18px 10px 19px;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 28px;
+
+    &:focus {
+      border: 2px solid $grey;
+      outline: none;
+    }
+  }
+
+  &__loginbtn,
+  &__createbtn {
+    width: 100%;
+    padding: 23px 15px 20px;
+    @extend %Rubik-500;
+    font-size: 18px;
+    color: #fffefe;
+    background-color: $grey;
+    border: none;
+    cursor: pointer;
+    margin-top: 9px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 35px 0 69px;
+  }
+
+  &__noregistered {
+    text-align: center;
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  &__createbtn {
+    color: #243f4d;
+    background-color: transparent;
+    border: 2px solid #a3bbc8;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      color: #fffefe;
+      background-color: $grey;
+    }
+  }
+}

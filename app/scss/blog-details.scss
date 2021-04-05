@@ -1,0 +1,16 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+@import "libs";
+@import "../module/_components/_header/_header";
+@import "../module/_components/_breadcrumbs/_breadcrumbs";
+@import "../module/_components/_asaid/_asaid";
+@import "../module/blog/_content";
+@import "../module/blog-details/_blog-details";
+@import "../module/blog-details/_comments";
+ 
+@import "../module/_components/_news/_news";
+@import "../module/_components/_slider-cooperation/_slider-cooperation";
+
+@import "../module/_components/_footer/_footer";

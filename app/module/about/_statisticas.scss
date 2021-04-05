@@ -1,0 +1,61 @@
+.statisticas {
+  background-color: $accent-bg;
+  padding: 84px 0;
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item {
+    width: 188px;
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &__item-img {
+    object-fit: cover;
+  }
+
+  &__item-img {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__item-box {
+    position: relative;
+  }
+
+  &__item-decor::after {
+    @extend %after;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: $grey;
+    bottom: -2px;
+    right: -9px;
+  }
+
+  &__item-numb {
+    font-size: 36px;
+    line-height: 32px;
+    color: $Dianne;
+  }
+
+  &__item-text {
+    font-size: 18px;
+    line-height: 32px;
+    color: $Dianne;
+  }
+
+  &__item:nth-child(2) {
+    & .statisticas__item-decor::after {
+      bottom: -9px;
+      right: -8px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.min.css">
+  </head>
+
+  <body>
+    {% include 'app/module/_components/_header/_header.html' %}
+    <main class="main">
+      {% include 'app/module/home-page/_top-slider.html' %}
+      {% include 'app/module/home-page/_support.html' %}
+      {% include 'app/module/home-page/_products-one.html' %}
+      {% include 'app/module/home-page/_lamps.html' %}
+      {% include 'app/module/home-page/_products-two.html' %}
+      {% include 'app/module/home-page/_products-video.html' %}
+      {% include 'app/module/_components/_news/_news.html' %}
+      {% include 'app/module/_components/_slider-cooperation/_slider-cooperation.html' %}
+    </main>
+    {% include 'app/module/_components/_footer/_footer.html' %}
+    <script src="js/main.min.js"></script>
+  </body>
+
+</html>

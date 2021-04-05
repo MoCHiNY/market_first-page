@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/blog.min.css">
+</head>
+
+<body>
+{% include 'app/module/_components/_header/_header.html' %}
+  <main class="main">
+  {% include 'app/module/blog/_breadcrumbs.html' %}
+<section class="blog">
+  <div class="container">
+    <div class="blog__inner">
+  {% include 'app/module/blog/_content.html' %}
+  {% include 'app/module/_components/_asaid/_asaid.html' %}
+    </div>
+  </div>
+</section>
+    
+{% include 'app/module/_components/_news/_news.html' %}
+{% include 'app/module/_components/_slider-cooperation/_slider-cooperation.html' %} 
+  </main>
+{% include 'app/module/_components/_footer/_footer.html' %}
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

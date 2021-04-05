@@ -1,0 +1,110 @@
+.project {
+  padding: 120px 0;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__img {
+    max-width: 570px;
+    object-fit: cover;
+  }
+
+  &__inner {
+    padding-left: 37px;
+  }
+
+  &__box {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 80px;
+  }
+
+  &__box-number {
+    font-size: 140px;
+    color: $grey;
+    line-height: 101px;
+  }
+
+  &__box-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75px;
+    margin-left: 29px;
+  }
+
+  &__inner-title {
+    padding: 54px 0 51px;
+    font-size: 36px;
+    line-height: 32px;
+    font-weight: 700;
+    color: $Dianne;
+  }
+
+  &__inner-text {
+    @extend %Rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    padding-bottom: 54px;
+    color: #243f4d;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &::before {
+      @extend %after;
+      top: 0;
+      left: 0;
+      width: 500px;
+      height: 3px;
+      opacity: 0.1;
+      background-color: #09316f;
+    }
+  }
+
+  &__item {
+    padding-top: 42px;
+    width: 170px;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:not(:last-child):after {
+      @extend %after;
+      right: 0;
+      height: 3px;
+      opacity: 0.1;
+      height: 81px;
+      width: 1px;
+      background-color: #09316f;
+    }
+
+    &:hover {
+      path {
+        fill: #008000;
+      }
+    }
+  }
+
+  &__item-box {
+    padding-left: 20px;
+  }
+
+  &__item-text {
+    font-size: 36px;
+    line-height: 38px;
+    color: $Dianne;
+  }
+
+  &__item-name {
+    font-size: 16px;
+    line-height: 17px;
+    color: #4c4c4c;
+  }
+}

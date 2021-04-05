@@ -1,0 +1,150 @@
+.blog {
+  
+  &__asaid {
+    width: 270px;
+  }
+
+  &__form {
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  &__form-input {
+    width: 270px;
+    height: 43px;
+    border: 1px solid rgba(163, 187, 200, 0.4);
+    border-radius: 5px;
+    padding: 5px 45px 5px 15px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__form-btn {
+    position: absolute;
+    width: 48px;
+    height: 43px;
+    background-color: #edf1f4;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    right: 0px;
+    transition: all .2s;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:hover {
+      background-color: #a3bbc8;
+      border-radius: 0;
+
+      & path {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.filter {
+  max-width: 270px;
+  width: 100%;
+  margin-right: 30px;
+  margin-top: 6px;
+
+  &__item {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $Dianne;
+    position: relative;
+    margin-bottom: 35px;
+    padding-right: 50px;
+
+    &::after {
+      @extend %after;
+      width: 39px;
+      height: 3px;
+      background-color: $grey;
+      border-radius: 1px;
+      top: 50%;
+      right: -14px;
+    }
+  }
+
+  &__checkbox-input {
+    @extend %checked-hidden;
+
+    &:checked+.filter__checkbox {
+      background-color: rgba(163, 187, 200, 0.4);
+      box-shadow: 2px 1px 2px $grey;
+    }
+  }
+
+  &__checkbox {
+    width: 270px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    color: $grey-menu;
+    font-size: 16px;
+    @extend %Rubik-400;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+
+.recent-posts {
+  .filter__title {
+    text-transform: uppercase;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 21px;
+  }
+
+  &__img {
+    min-width: 71px;
+    height: 71px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  &__box-link {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    @extend %Rubik-400;
+    text-decoration: none;
+  }
+
+  & .news__box {
+    padding: 0;
+
+    &:before {
+      width: 0;
+      height: 0;
+    }
+
+    .news__box-date {
+      font-size: 12px;
+      line-height: 30px;
+      @extend %Rubik-400;
+      color: #9a9a9a;
+    }
+
+    .news__box-author {
+      display: none;
+    }
+  }
+}

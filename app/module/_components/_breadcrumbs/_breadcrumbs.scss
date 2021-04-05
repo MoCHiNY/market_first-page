@@ -1,0 +1,53 @@
+.top-page {
+  background-color: rgba(163, 187, 200, 0.2);
+  padding: 35px 0 58px;
+
+  &__title {
+    font-size: 36px;
+    line-height: 24px;
+    color: #222933;
+    @extend %Rubik-300;
+    text-align: center;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding-right: 20px;
+    position: relative;
+    opacity: 0.6;
+    font-family: Rubik;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #222933;
+
+    &:last-child {
+      color: orange;
+      padding-right: 0;
+
+      &::after {
+        content: "";
+      }
+    }
+
+    &::after {
+      content: "/";
+      position: absolute;
+      right: 7px;
+    }
+  }
+
+  &__item-link {
+    color: inherit;
+    text-decoration: none;
+  }
+}

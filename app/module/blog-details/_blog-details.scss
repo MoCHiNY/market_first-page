@@ -1,0 +1,257 @@
+.blog-details {
+  &__item {
+    & h3 {
+      font-size: 36px;
+      line-height: 26px;
+      color: #333333;
+      margin-bottom: 10px;
+      @extend %Rubik-400;
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 30px;
+      color: #243f4d;
+      @extend %Rubik-400;
+      margin-bottom: 43px;
+    }
+
+    & blockquote {
+      @extend %Rubik-400;
+      font-size: 16px;
+      line-height: 26px;
+      background-color: rgba(163, 187, 200, 0.4);
+      padding: 20px 93px 20px 40px;
+      border-left: 7px solid $grey;
+      margin-bottom: 45px;
+
+      & span {
+        display: block;
+        margin-top: 12px;
+        position: relative;
+        padding-left: 40px;
+
+        &::before {
+          @extend %after;
+          position: absolute;
+          width: 20px;
+          height: 4px;
+          background-color: $grey;
+          left: 0;
+          top: 12px;
+        }
+      }
+    }
+  }
+
+  &__item-subtitle {
+    font-size: 16px;
+    line-height: 30px;
+    @extend %Rubik-500;
+    color: $Dianne;
+    margin-bottom: 27px;
+    display: inline-block;
+    margin-top: 15px;
+
+  }
+
+  &__item-img--left {
+    width: 323px;
+    object-fit: cover;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    float: left;
+  }
+
+  &__item-img--right {
+    float: right;
+  }
+
+  &__box {
+    padding: 24px 0 26px;
+    border-top: 2px solid #ebebeb;
+    border-bottom: 2px solid #ebebeb;
+  }
+
+  &__box-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__boxauthor {
+    display: inherit;
+  }
+
+  &__box-inner span {
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #666666;
+    @extend %Rubik-400;
+  }
+
+  &__boxauthor-img {
+    width: 76px;
+    height: 76px;
+    object-fit: cover;
+    margin-right: 28px;
+  }
+
+  &__author-link {
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 24px;
+    @extend %Rubik-500;
+    color: #333333;
+  }
+
+  &__social-tags,
+  &__social-share {
+    @extend %Rubik-400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #999999;
+
+    & span {
+      display: inline-block;
+      margin-right: 30px;
+      color: #333333;
+    }
+  }
+
+  &__social-share {
+    display: flex;
+    margin-top: 5px;
+
+    & span {
+      margin-right: 19px;
+    }
+  }
+
+  &__social-sharelist {
+    display: flex;
+    margin-left: 30px;
+  }
+
+  &__social-shareitem {
+    padding-right: 20px;
+  }
+
+  &__social-facebook:hover {
+    & path {
+      fill: blue;
+    }
+  }
+
+  &__social-twitter:hover {
+    & path {
+      fill: rgb(21, 139, 218);
+    }
+  }
+
+  &__social-instagram:hover {
+    & path {
+      fill: rgb(180, 17, 17);
+    }
+  }
+
+  &__social-google:hover {
+    & path {
+      fill: rgb(62, 148, 206);
+    }
+  }
+
+  &__leave-lable {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__leave-form {
+    &.contact--form {
+      max-width: 620px;
+      width: 100%;
+
+      & .blog-details__leave-input {
+        width: 300px;
+        height: 50px;
+        background-color: #fbfbfb;
+        border: none;
+
+        &::placeholder {
+          text-transform: uppercase;
+        }
+      }
+
+      & .blog-details__leave-textarea {
+        background-color: #fbfbfb;
+        border: none;
+
+        &::placeholder {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  &__leave-input {
+    width: 50%;
+    padding: 15px 40px 15px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-image: url('../images/icons/user_form.svg');
+    background-repeat: no-repeat;
+    background-position: 95%;
+
+    &:nth-child(2) {
+      background-image: url('../images/icons/massage_form.svg');
+    }
+
+    &:focus {
+      outline: transparent;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 36px;
+      @extend %Rubik-400;
+      color: #999999;
+    }
+
+    &+.blog-details__leave-input {
+      margin-left: 30px;
+    }
+
+  }
+
+
+  &__leave-textarea {
+    padding: 19px 40px 19px 21px;
+    max-width: 830px;
+    width: 100%;
+    min-height: 120px;
+    resize: none;
+    margin-bottom: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-image: url('../images/icons/commens__form.svg');
+    background-repeat: no-repeat;
+    background-position: 98% 15%;
+
+    &:focus {
+      outline: transparent;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 36px;
+      @extend %Rubik-400;
+      color: #999999;
+    }
+  }
+
+  &__leave-btn {
+    cursor: pointer;
+    padding: 19px 35px;
+    margin-bottom: 0;
+  }
+}

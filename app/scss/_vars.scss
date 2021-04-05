@@ -9,7 +9,7 @@ $Dianne:#243f4d;
 %DMSans-400 {
   font-family: 'DMSans-Regular',
     sans-serif;
-    font-weight: 400;
+  font-weight: 400;
 }
 
 %DMSans-500 {
@@ -39,13 +39,13 @@ $Dianne:#243f4d;
 %Rubik-500 {
   font-family: 'Rubik-Medium',
     sans-serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 %Rubik-700 {
   font-family: 'Rubik-Bold',
     sans-serif;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 %Poppins-600 {
@@ -60,22 +60,31 @@ $Dianne:#243f4d;
   font-weight: 700;
 }
 
-%flex-standart{
+%flex-standart {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-%after{
-  content:'';
+%after {
+  content: '';
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
 }
 
-@function max($numbers...) {
- @return m#{a}x(#{$numbers});
+%checked-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
 }
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
 @function min($numbers...) {
-@return m#{i}n(#{$numbers});
+  @return m#{i}n(#{$numbers});
 }

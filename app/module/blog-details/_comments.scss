@@ -1,0 +1,82 @@
+.comments {
+  padding: 67px 0 97px;
+
+  &__item {
+    margin-top: 32px;
+
+    &:nth-child(odd) {
+      margin-left: 130px;
+    }
+  }
+
+  &__title {
+    @extend %Rubik-700;
+    font-size: 24px;
+    line-height: 25px;
+    color: #436372;
+    margin-bottom: 61px;
+  }
+
+  &__item-inner {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 30px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__item-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 32px;
+  }
+
+  &__item-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+
+    &-title {
+      @extend %Rubik-700;
+      font-size: 16px;
+      color: #436372;
+    }
+
+    & span {
+      @extend %Rubik-400;
+      font-size: 14px;
+      color: #9e9e9e;
+    }
+  }
+
+  &__item-inner-text {
+    font-size: 16px;
+    line-height: 30px;
+    @extend %Rubik-400;
+    color: #565872;
+    margin-bottom: 20px;
+  }
+
+  &__item-inner-link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #526278;
+    @extend %Rubik-400;
+    padding-right: 30px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../images/icons/arrow_lamp.png);
+      width: 22px;
+      height: 9px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

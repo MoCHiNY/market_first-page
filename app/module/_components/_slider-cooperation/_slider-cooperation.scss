@@ -1,0 +1,32 @@
+.slider-cooperation {
+  background-color: rgba(252, 215, 182, 0.4);
+  height: 437px;
+  margin-top: -170px;
+
+  &__inner {
+    transform: translateY(165%);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    min-height: 165px;
+  }
+
+  &__item-link {
+    outline: transparent;
+  }
+
+  &__item-img {
+    margin: 0 auto;
+  }
+
+  &--size {
+    max-height: 251px;
+    margin-top: 120px;
+
+    & .slider-cooperation__inner {
+      transform: translateY(55%);
+    }
+  }
+}

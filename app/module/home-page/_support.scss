@@ -1,0 +1,73 @@
+.support {
+  &__bg {
+    min-height: 171px;
+    background-color: $bg-opacity;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item {
+    max-width: 33.333%;
+    padding: 44px 150px 10px 75px;
+    position: relative;
+  }
+
+  &__item-title {
+    font-size: 18px;
+    line-height: 40px;
+    color: #414141;
+    @extend %DMSans-700;
+  }
+
+  &__item-text {
+    @extend %DMSans-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #585858;
+    width: 230px;
+  }
+
+  &__item::before {
+    @extend %after;
+    top: 50px;
+    left: 0;
+  }
+
+  &__item:nth-child(1) {
+    &::before {
+      width: 50px;
+      height: 50px;
+      background-image: url("../images/icons/about_time.svg");
+    }
+  }
+
+  &__item:nth-child(2) {
+    &::before {
+      width: 50px;
+      height: 30px;
+      background-image: url("../images/icons/about_delivery.svg");
+    }
+  }
+
+  &__item:nth-child(3) {
+    &::before {
+      width: 50px;
+      height: 45px;
+      background-image: url("../images/icons/about_credit_card.svg");
+    }
+  }
+
+  &__item:not(:last-child):after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    min-height: 171px;
+    background-color: rgba(36, 63, 77, 0.2);
+  }
+}

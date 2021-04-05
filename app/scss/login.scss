@@ -1,0 +1,10 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import 'node_modules/slick-carousel/slick/slick.scss';
+@import "global";
+@import "../module/_components/_header/_header";
+@import "../module/_components/_breadcrumbs/_breadcrumbs";
+@import "../module/login/_modal";
+@import "../module/_components/_slider-cooperation/_slider-cooperation";
+@import "../module/_components/_footer/_footer";

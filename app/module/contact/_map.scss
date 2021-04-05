@@ -1,0 +1,135 @@
+.blog__content-item-btn {
+  padding: 20px 17px 20px 17px;
+  background-color: #fff;
+  color: $grey;
+  text-decoration: none;
+  @extend %DMSans-700;
+  border: 1px solid $grey;
+  transition: all .3s;
+  display: inline-block;
+  margin-bottom: 50px;
+
+  & svg {
+    margin-left: 44px;
+  }
+
+  &:hover {
+    background-color: $grey;
+    border: 1px solid transparent;
+    color: #fff;
+
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.blog-details {
+  
+  &__leave-lable {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__leave-form {
+    &.contact--form {
+      max-width: 620px;
+      width: 100%;
+
+      & .blog-details__leave-input {
+        width: 300px;
+        height: 50px;
+        background-color: #fbfbfb;
+        border: none;
+
+        &::placeholder {
+          text-transform: uppercase;
+        }
+      }
+
+      & .blog-details__leave-textarea {
+        background-color: #fbfbfb;
+        border: none;
+
+        &::placeholder {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  &__leave-input {
+    width: 50%;
+    padding: 15px 40px 15px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-image: url('../images/icons/user_form.svg');
+    background-repeat: no-repeat;
+    background-position: 95%;
+
+    &:nth-child(2) {
+      background-image: url('../images/icons/massage_form.svg');
+    }
+
+    &:focus {
+      outline: transparent;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 36px;
+      @extend %Rubik-400;
+      color: #999999;
+    }
+
+    &+.blog-details__leave-input {
+      margin-left: 30px;
+    }
+
+  }
+
+
+  &__leave-textarea {
+    padding: 19px 40px 19px 21px;
+    max-width: 830px;
+    width: 100%;
+    min-height: 120px;
+    resize: none;
+    margin-bottom: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-image: url('../images/icons/commens__form.svg');
+    background-repeat: no-repeat;
+    background-position: 98% 15%;
+
+    &:focus {
+      outline: transparent;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 36px;
+      @extend %Rubik-400;
+      color: #999999;
+    }
+  }
+  
+
+  &__leave-btn {
+    cursor: pointer;
+    padding: 19px 35px;
+    margin-bottom: 0;
+  }
+}
+
+.map {
+  padding-bottom: 140px;
+  
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    width: 100%;
+  }
+}

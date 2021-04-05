@@ -1,0 +1,16 @@
+.products-video {
+  max-width: 1920px;
+  height: 501px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  margin: 119px auto;
+
+  &__link {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

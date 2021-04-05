@@ -1,17 +1,17 @@
 html,
-body{
+body {
   height: 100%;
 }
 
-body{
+body {
   @extend %DMSans-700;
   font-size: 14px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
- 
 }
-.container--big{
+
+.container--big {
   max-width: 1800px;
   padding: 0 15px;
   margin: 0 auto;
@@ -21,4 +21,74 @@ body{
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.pagination {
+  padding-top: 108px;
+
+  &.pagination__list--mod {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 25px;
+    .pagination__list {
+      margin-left: 0 !important;
+    }
+
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 30px;
+    @extend %Rubik-400;
+
+  }
+
+  .pagination__prev {
+    display: none;
+  }
+
+  &__style {
+    width: 74px;
+    height: 50px;
+    border: 1px solid $grey;
+    text-decoration: none;
+    color: $Dianne;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0 15px !important;
+  }
+
+  &__item {
+    width: 50px;
+    height: 50px;
+    border: 1px solid $grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &.pagination__item--active {
+      background-color: $grey;
+
+      .pagination__item-link {
+        color: #fff;
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__item-link {
+    color: $Dianne;
+    text-decoration: none;
+  }
 }
