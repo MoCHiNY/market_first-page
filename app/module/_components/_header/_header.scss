@@ -3,16 +3,96 @@
 
   &__inner {
     @extend %flex-standart;
+
+    @include _515 {
+      flex-wrap: wrap;
+    }
+
   }
 }
 
 .menu {
-  &__list {
-    display: flex;
+
+  @include _980 {
+    order: 1;
   }
 
-  &__list-item+.menu__list-item {
+  @include _515 {
+    order: 0;
+  }
+
+  &__btn {
+    display: none;
+
+    @include _980 {
+      width: 30px;
+      height: 26px;
+      background-color: transparent;
+      border: none;
+      border-top: 3px solid $grey;
+      border-bottom: 3px solid $grey;
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      cursor: pointer;
+      position: relative;
+      z-index: 155;
+
+      & span {
+        width: 100%;
+        height: 3px;
+        background-color: $grey;
+      }
+
+      &.menu__btn--active {
+        border-color: #fff;
+
+        & span {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @include _980 {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      top: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: rgba($grey, 0.9);
+      z-index: 5;
+      transform: translateY(0%);
+      transition: all .3s;
+
+      &.menu__list--active {
+        transform: translateY(-200%);
+      }
+    }
+  }
+
+  &__list-item {
     padding-left: 34px;
+
+    @include _980 {
+      padding: 15px 0;
+      width: 100%;
+      text-align: center;
+      transform: translateY(120px);
+
+      & a {
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+      }
+    }
   }
 
   &__list-link {
@@ -26,6 +106,9 @@
   align-items: center;
   justify-content: space-between;
   width: 320px;
+  @include _515 {
+    margin: 10px auto 0;
+  }
 
   &-link--left,
   &-link--right {

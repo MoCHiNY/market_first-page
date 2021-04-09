@@ -2,12 +2,20 @@
   background-color: rgba(163, 187, 200, 0.2);
   padding: 35px 0 58px;
 
+  @include _615 {
+    padding: 32px 0 32px;
+  }
+
   &__title {
     font-size: 36px;
     line-height: 24px;
     color: #222933;
     @extend %Rubik-300;
     text-align: center;
+
+    @include _615 {
+      font-size: 25px;
+    }
   }
 }
 

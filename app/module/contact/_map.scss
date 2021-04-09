@@ -25,13 +25,22 @@
 }
 
 .blog-details {
-  
+
   &__leave-lable {
     display: flex;
     margin-bottom: 20px;
+
+    @include _615 {
+      flex-wrap: wrap;
+    }
   }
 
   &__leave-form {
+    @include _1200 {
+      margin: 0 auto;
+      margin-bottom: 15px;
+    }
+
     &.contact--form {
       max-width: 620px;
       width: 100%;
@@ -41,6 +50,11 @@
         height: 50px;
         background-color: #fbfbfb;
         border: none;
+
+        @include _615 {
+          width: 100%;
+          margin-left: 0;
+        }
 
         &::placeholder {
           text-transform: uppercase;
@@ -99,6 +113,12 @@
     background-image: url('../images/icons/commens__form.svg');
     background-repeat: no-repeat;
     background-position: 98% 15%;
+    @include _980{
+      margin-bottom: 30px;
+    }
+    @include _615 {
+      margin-bottom: 20px;
+    }
 
     &:focus {
       outline: transparent;
@@ -111,7 +131,7 @@
       color: #999999;
     }
   }
-  
+
 
   &__leave-btn {
     cursor: pointer;
@@ -122,14 +142,40 @@
 
 .map {
   padding-bottom: 140px;
-  
+
+  @include _980 {
+    padding-bottom: 80px;
+  }
+
+  @include _615 {
+    padding-bottom: 50px;
+  }
+
+  @include _515 {
+    padding-bottom: 30px;
+    width: 100%;
+
+  }
+
 
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include _1200 {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__form {
     width: 100%;
+  }
+
+  &__carts iframe {
+    @include _515 {
+      width: 515px;
+      width: 100%;
+    }
   }
 }

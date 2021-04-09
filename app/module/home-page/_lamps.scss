@@ -2,6 +2,18 @@
   &__items {
     display: flex;
     padding: 93px 0 50px;
+
+    @include _1200 {
+      flex-wrap: wrap;
+    }
+
+    @include _980 {
+      padding: 50px 0 50px;
+    }
+
+    @include _615 {
+      padding: 0;
+    }
   }
 
   &__item {
@@ -12,35 +24,68 @@
     padding: 0 20px;
     justify-content: center;
     align-items: center;
-    // padding-left: 130px;
     background-color: rgba(252, 215, 182, 0.4);
 
-    
+    @include _1350 {
+      padding: 0;
+    }
+
+    @include _1200 {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
   &__item+.lamps__item {
     margin-left: 30px;
+
+    @include _1200 {
+      margin-left: 0;
+      margin-top: 10px;
+    }
   }
 
   &__item-img {
-    width: 233px;
+    max-width: 233px;
     object-fit: cover;
     transform: translateY(-83px);
     min-height: 405px;
     margin-right: 20px;
     max-width: 100%;
+
+    @include _1200 {
+      min-height: 0;
+      transform: translateY(0px);
+      width: 20%;
+    }
+
+
   }
 
   &__item-img--cart2 {
     margin-right: 62px;
+
+    @include _1350 {
+      margin-right: 12px;
+    }
+  }
+
+  &__box {
+    @include _980 {
+      width: 100%;
+    }
   }
 
   &__box-title {
     font-size: 26px;
     line-height: 32px;
-
     max-width: 250px;
     margin-bottom: 32px;
+
+    @include _980 {
+      font-size: 22px;
+      margin-bottom: 25px;
+    }
   }
 
   &__box-text {
@@ -50,6 +95,11 @@
     line-height: 30px;
     color: $Dianne;
     margin-bottom: 34px;
+    padding: 1px;
+
+    @include _515 {
+      display: none;
+    }
   }
 
   &__box-btn {
@@ -67,6 +117,13 @@
     cursor: pointer;
     position: relative;
     transition: all 0.2s;
+
+    @include _615 {
+      padding: 20px 44px 25px 20px;
+      width: 154px;
+      height: 51px;
+      margin-bottom: 15px;
+    }
 
     &::after {
       @extend %after;

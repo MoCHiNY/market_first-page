@@ -1,4 +1,57 @@
+.products-one {
+  &__title {
+    @extend %DMSans-700;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #191919;
+    text-align: center;
+    margin-bottom: 37px;
+
+    @include _515 {
+      font-size: 25px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn {
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    line-height: 1.2;
+    @extend %DMSans-700;
+    font-size: 16px;
+    color: #8b8b8b;
+    transition: color 0.2s;
+
+    &+.products-one__btn {
+      padding-left: 30px;
+
+      @include _515 {
+        padding-left: 11px;
+      }
+    }
+
+    &.mixitup-control-active {
+      color: #1a1a1a;
+    }
+  }
+}
+
+
 .products-two {
+  padding: 75px 0 93px;
+  @include _515 {
+    padding: 32px 0 32px;
+  }
+  
   &__content {
     display: grid;
     display: grid;
@@ -6,6 +59,20 @@
     row-gap: 30px;
     column-gap: 30px;
     margin-top: 80px;
+    @include _1200{
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      column-gap: 20px;
+    }
+    @include _980 {
+      grid-template-columns: 1fr;
+      column-gap: 10px;
+      column-gap: 10px;
+      margin-top: 50px;
+    }
+    @include _515 {
+      margin-top: 10px;
+    }
   }
 
   &__item {
@@ -14,6 +81,14 @@
     position: relative;
     cursor: pointer;
     display: block;
+    @include _980 {
+     margin: 0 auto;
+    }
+    @include _515 {
+      max-width: 100%;
+      width: 100%;
+    }
+    
   }
 
   &__item-img {

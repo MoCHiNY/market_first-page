@@ -1,0 +1,144 @@
+.related {
+  padding-bottom: 120px;
+
+  &__title {
+    color: #243f4d;
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 71px;
+  }
+
+  &__slider {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .slick-arrow {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    font-size: 0;
+    cursor: pointer;
+    border: 2px solid #a3bbc8;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+  }
+
+  .slick-prev::after,
+  .slick-next::after {
+    content: "";
+    background-image: url('../images/icons/arrow_left.svg');
+    position: absolute;
+    width: 16px;
+    height: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 14px;
+  }
+
+  .slick-prev::after {
+    background-image: url('../images/icons/arrow_left.svg');
+
+  }
+
+  .slick-next::after {
+    background-image: url('../images/icons/arrow_left.svg');
+    transform: rotate(180deg);
+    top: 45%;
+
+  }
+
+  .slick-prev {
+    transform: translate(-65px, -100px);
+    outline: none;
+
+  }
+
+  .slick-next {
+    transform: translateY(-100px);
+    outline: none;
+  }
+
+  .slick-arrow.slick-disabled {
+    opacity: 0.5;
+    border: 2px solid #a3bbc8;
+  }
+}
+
+
+.products-one {
+  padding: 75px 0 93px;
+
+  &__item {
+    position: relative;
+    width: 270px;
+    min-height: 380px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+
+    & img {
+      object-fit: cover;
+    }
+  }
+
+  &__item-inner {
+    padding: 60px 0 38px;
+  }
+
+  &__item-subtitle {
+    @extend %DMSans-500;
+    font-size: 16px;
+    line-height: 40px;
+    color: #243f4d;
+  }
+
+  &__item-price {
+    @extend %DMSans-700;
+    font-size: 16px;
+    line-height: 40px;
+    color: #a3bbc8;
+    display: block;
+    text-align: center;
+  }
+
+  &__box {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    padding: 90px 10px;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__item-link {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 8px 6px 47px 3px rgba(37, 37, 37, 0.2);
+
+    &:hover {
+      background-color: $grey;
+      transform: scale(1.1);
+
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}

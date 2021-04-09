@@ -1,23 +1,53 @@
 .project {
   padding: 120px 0;
 
+  @include _980 {
+    padding: 80px 0;
+  }
+
+  @include _615 {
+    padding: 30px 0;
+  }
+
   &__wrapper {
     display: flex;
+
+    @include _1200 {
+      flex-wrap: wrap;
+    }
   }
 
   &__img {
     max-width: 570px;
     object-fit: cover;
+    width: 100%;
+
+    @include _1200 {
+      margin: 0 auto;
+    }
   }
 
   &__inner {
     padding-left: 37px;
+
+    @include _1200 {
+      padding-left: 0;
+    }
+
   }
 
   &__box {
     display: flex;
     align-items: flex-end;
     margin-top: 80px;
+
+    @include _980 {
+      margin-top: 50px;
+    }
+
+    @include _615 {
+      margin-top: 30px;
+    }
   }
 
   &__box-number {
@@ -40,6 +70,11 @@
     line-height: 32px;
     font-weight: 700;
     color: $Dianne;
+
+    @include _615 {
+      font-size: 25px;
+      padding: 20px 0 20px;
+    }
   }
 
   &__inner-text {
@@ -49,12 +84,20 @@
     font-weight: 400;
     padding-bottom: 54px;
     color: #243f4d;
+    @include _615{
+      padding-bottom: 25px;
+    }
   }
 
   &__items {
     display: flex;
     justify-content: space-between;
     position: relative;
+
+    @include _615 {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
     &::before {
       @extend %after;
@@ -64,6 +107,14 @@
       height: 3px;
       opacity: 0.1;
       background-color: #09316f;
+
+      @include _1200 {
+        width: 100%;
+      }
+      @include _615 {
+        width: 0;
+        height: 0;
+      }
     }
   }
 
@@ -74,6 +125,16 @@
     position: relative;
     cursor: pointer;
     transition: all 0.3s;
+
+    @include _615 {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 100%;
+      justify-content: center;
+      margin: 0 auto;
+      border: 1px solid rgba(#09316f, 0.2);
+      margin-top: 10px;
+    }
 
     &:not(:last-child):after {
       @extend %after;

@@ -1,13 +1,38 @@
 .team {
   padding: 120px 0 119px;
 
+  @include _980 {
+    padding: 80px 0 80px;
+  }
+
+  @include _615 {
+    padding: 50px 0 50px;
+  }
+
+  @include _515 {
+    padding: 30px 0 30px;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include _1200 {
+      flex-wrap: wrap;
+    }
   }
 
   &__content {
     width: 320px;
+
+    @include _1200 {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+
+    @include _615 {
+      margin-bottom: 30px;
+    }
   }
 
   &__content-title {
@@ -15,6 +40,11 @@
     line-height: 32px;
     color: $Dianne;
     padding-bottom: 38px;
+
+    @include _615 {
+      font-size: 25px;
+      padding-bottom: 23px;
+    }
   }
 
   &__content-text {
@@ -65,6 +95,10 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 770px;
+
+    @include _980 {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -72,6 +106,10 @@
 
     &:nth-child(2n + 1) {
       padding-right: 30px;
+
+      @include _615 {
+        padding-right: 0;
+      }
     }
   }
 
@@ -88,6 +126,11 @@
     transform: translateY(-50px);
     background-color: #ffffff;
     box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.2);
+    width: 100%;
+
+    @include _515 {
+      padding: 15px 1px 15px 1px;
+    }
   }
 
   &__box {

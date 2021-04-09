@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/product-list.min.css">
+</head>
+
+<body>
+{% include 'app/module/_components/_header/_header.html' %}
+  <main class="main">
+  {% include 'app/module/product-list/_breadcrumbs.html' %}
+    <section class="shop">
+      <div class="container">
+        <div class="shop__inner">
+          {% include 'app/module/_components/_filter/_filter.html' %}
+          <div class="contant">
+          {% include 'app/module/product-list/_contact-filter.html' %}
+          {% include 'app/module/product-list/_contact-box.html' %}
+             <div class="pagination">
+               <div class="containner">
+                 <div class="pagination__inner">
+                   <a class="pagination__prev pagination__style" href="#">Prew</a>
+                   <ul class="pagination__list">
+                     <li class="pagination__item pagination__item--active">
+                       <a class="pagination__item-link  " href="#">
+                         1
+                       </a></li>
+                     <li class="pagination__item">
+                       <a class="pagination__item-link" href="#">
+                         2
+                       </a></li>
+                     <li class="pagination__item">
+                       <a class="pagination__item-link" href="#">
+                         3
+                       </a></li>
+                   </ul>
+                   <a class="pagination__next pagination__style" href="#">Next</a>
+                 </div>
+               </div>
+             </div>
+          </div>
+        </div>
+      </div>  
+    </section>
+   
+   {% include 'app/module/_components/_slider-cooperation/_slider-cooperation--size.html' %}
+  </main>
+{% include 'app/module/_components/_footer/_footer.html' %}
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

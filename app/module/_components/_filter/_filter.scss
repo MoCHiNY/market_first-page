@@ -1,0 +1,150 @@
+.shop {
+  padding-top: 40px;
+
+  &__inner {
+    display: flex;
+  }
+}
+
+.filter {
+  max-width: 270px;
+  width: 100%;
+  margin-right: 30px;
+  margin-top: 6px;
+
+  &__item {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $Dianne;
+    position: relative;
+    margin-bottom: 35px;
+    padding-right: 50px;
+
+    &::after {
+      @extend %after;
+      width: 39px;
+      height: 3px;
+      background-color: $grey;
+      border-radius: 1px;
+      top: 50%;
+      right: -14px;
+    }
+  }
+
+  &__checkbox-input {
+    @extend %checked-hidden;
+
+    &:checked+.filter__checkbox {
+      background-color: rgba(163, 187, 200, 0.4);
+      box-shadow: 2px 1px 2px $grey;
+    }
+  }
+
+  &__checkbox {
+    width: 270px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    color: $grey-menu;
+    font-size: 16px;
+    @extend %Rubik-400;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.filter-price__from,
+.filter-price__to {
+  font-size: 14px;
+  @extend %Rubik-400;
+  color: $Dianne;
+
+  &::before {
+    content: "$";
+  }
+}
+
+.filter-price {
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 270px;
+  }
+}
+
+.irs--flat .irs-line {
+  top: 5px;
+  height: 3px;
+  opacity: 0.65;
+  background-color: $grey;
+  border-radius: 1px;
+}
+
+.irs--flat .irs-bar {
+  top: 5px;
+  height: 4px;
+  background-color: $grey;
+  border-radius: 0.4px;
+}
+
+.irs--flat .irs-handle {
+  top: 0px;
+  width: 15px;
+  height: 15px;
+  background-color: #a3bbc8;
+}
+
+.irs-from,
+.irs-to,
+.irs-single {
+  display: none;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+  display: none;
+}
+
+.filter-recent {
+  &__item {
+    display: flex;
+    margin-bottom: 35px;
+  }
+
+  &__img {
+    width: 71px;
+    height: 71px;
+    object-fit: contain;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 15px;
+    @extend %Rubik-400;
+    color: #333333;
+    margin-left: 20px;
+
+    &.filter-recent__stars {
+      display: none;
+    }
+  }
+}
+
+.filter-recent-stars {
+  padding-left: 0;
+}

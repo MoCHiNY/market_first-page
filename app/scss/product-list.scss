@@ -5,12 +5,8 @@
 @import "libs";
 @import "../module/_components/_header/_header";
 @import "../module/_components/_breadcrumbs/_breadcrumbs";
-@import "../module/product-details/_details";
-@import "../module/product-details/_tabs";
-@import "../module/product-details/_related";
-
-
-
-@import "../module/_components/_news/_news";
+@import "../module/_components/_filter/_filter";
+@import "../module/product-list/_contact-filter";
+@import "../module/product-list/_contact-box";
 @import "../module/_components/_slider-cooperation/_slider-cooperation";
 @import "../module/_components/_footer/_footer";

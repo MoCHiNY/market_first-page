@@ -4,6 +4,15 @@
   font-size: 16px;
   line-height: 30px;
   color: $Dianne;
+  @include _980{
+   padding: 80px 0;
+  }
+  @include _615 {
+    padding: 50px 0;
+  }
+  @include _515 {
+    padding: 30px 0;
+  }
 
   &__title {
     margin-bottom: 27px;

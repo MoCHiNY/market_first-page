@@ -1,9 +1,19 @@
+.contant {
+  width: 100%;
+
+  .contant__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .products-one__item {
+      min-width: 270px;
+    }
+  }
+}
+
 .products-one {
   padding: 75px 0 93px;
-  @include _515 {
-    padding: 32px 0 32px;
-  }
-
 
   &__title {
     @extend %DMSans-700;
@@ -12,11 +22,6 @@
     color: #191919;
     text-align: center;
     margin-bottom: 37px;
-
-    @include _515 {
-      font-size: 25px;
-      margin-bottom: 24px;
-    }
   }
 
   &__wrapper {
@@ -39,10 +44,8 @@
 
     &+.products-one__btn {
       padding-left: 30px;
-      @include _515{
-        padding-left: 11px;
-      }
     }
+
     &.mixitup-control-active {
       color: #1a1a1a;
     }
@@ -55,24 +58,6 @@
     column-gap: 30px;
     margin-top: 80px;
     position: relative;
-
-    @include _1200 {
-      grid-template-columns: 1fr 1fr 1fr;
-      row-gap: 15px;
-      column-gap: 15px;
-    }
-
-    @include _980 {
-      grid-template-columns: 1fr 1fr;
-      row-gap: 15px;
-      column-gap: 15px;
-    }
-
-    @include _515 {
-      grid-template-columns: 1fr;
-      row-gap: 5px;
-      column-gap: 5px;
-    }
   }
 
   &__item {
@@ -84,16 +69,6 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-
-    @include _980 {
-      width: 220px;
-      min-height: 339px;
-    }
-
-    @include _515 {
-      width: 100%;
-      min-height: 330px;
-    }
 
     .filter-recent__box {
       display: none;
@@ -245,9 +220,6 @@
     opacity: 0;
     padding: 90px 10px;
     transition: all 0.3s;
-    @include _615{
-      opacity: 1;
-    }
 
     &:hover {
       opacity: 1;

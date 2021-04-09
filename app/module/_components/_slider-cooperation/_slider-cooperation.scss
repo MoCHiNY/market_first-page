@@ -3,8 +3,16 @@
   height: 437px;
   margin-top: -170px;
 
+  @include _515 {
+    height: 400px;
+
+  }
+
   &__inner {
     transform: translateY(165%);
+    @include _515 {
+      transform: translateY(139%);
+    }
   }
 
   &__list {

@@ -1,5 +1,12 @@
 
 $(function () {
+
+$('.menu__btn').on('click',function () {
+  $('.menu__btn').toggleClass('menu__btn--active');
+  $('.menu__list').toggleClass('menu__list--active');
+});
+
+
 $('.related__slider').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -89,7 +96,37 @@ $(".filter-price__input").ionRangeSlider({
   autoplay: true,
   autoplaySpeed: 2000,
   slidesToShow: 5,
-  slidesToScroll: 1
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+        settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 980,
+        settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 615,
+        settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+     {
+      breakpoint: 415,
+        settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+  ]
  });
 
 
@@ -114,8 +151,6 @@ var mixer1 = mixitup('.products-one__content', {
       control: '.products__btn--two'
     }
   });
-
-
 });
 
 

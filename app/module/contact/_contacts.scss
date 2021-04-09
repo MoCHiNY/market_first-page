@@ -2,6 +2,19 @@
   padding: 120px 0;
   text-align: center;
 
+  @include _980 {
+    padding: 80px 0;
+  }
+
+  @include _615 {
+    padding: 50px 0;
+  }
+
+  @include _515 {
+    padding: 30px 0;
+  }
+
+
   &__subtitle {
     font-size: 16px;
     line-height: 20px;
@@ -15,12 +28,25 @@
     line-height: 57px;
     color: #436372;
     margin-bottom: 75px;
+
+    @include _980 {
+      margin-bottom: 25px;
+    }
+
+    @include _615 {
+      font-size: 25px;
+      margin-bottom: 0px;
+    }
   }
 
   &__box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include _980 {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -32,6 +58,10 @@
     cursor: pointer;
     transition: all .3s;
     position: relative;
+
+    @include _515 {
+      height: 331px;
+    }
 
     &::after {
       content: '';

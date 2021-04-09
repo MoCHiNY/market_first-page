@@ -7,12 +7,32 @@
   &__items {
     display: flex;
     justify-content: space-around;
+
+    @include _1100 {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
     max-width: 33.333%;
     padding: 44px 150px 10px 75px;
     position: relative;
+
+    @include _1100 {
+      max-width: 100%;
+      min-height: 154px;
+
+    }
+
+    @include _980 {
+      max-width: 100%;
+      width: 100%;
+      border-bottom: 2px solid rgba(36, 63, 77, 0.2);
+    }
+
+    @include _515 {
+      padding: 23px 14px 11px 63px;
+    }
   }
 
   &__item-title {
@@ -69,5 +89,10 @@
     width: 1px;
     min-height: 171px;
     background-color: rgba(36, 63, 77, 0.2);
+
+    @include _1100 {
+      width: 0;
+      height: 0;
+    }
   }
 }

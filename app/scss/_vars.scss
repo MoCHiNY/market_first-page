@@ -88,3 +88,47 @@ $Dianne:#243f4d;
 @function min($numbers...) {
   @return m#{i}n(#{$numbers});
 }
+
+@mixin _1350 {
+  @media (max-width: 1350px) {
+    @content;
+  }
+}
+
+
+@mixin _1200 {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin _1100{
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+
+
+@mixin _980 {
+  @media (max-width: 980px) {
+    @content;
+  }
+}
+
+@mixin _615 {
+  @media (max-width: 615px) {
+    @content;
+  }
+}
+
+@mixin _515 {
+  @media (max-width: 515px) {
+    @content;
+  }
+}
+
+@mixin _320 {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
